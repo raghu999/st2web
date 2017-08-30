@@ -76,7 +76,9 @@ describe('User visits packs page', function () {
   it('should have all the packs present', function () {
     var packs = JSON.parse(packs_resource[0].response.body);
 
-    browser.assert.elements(util.name('pack'), packs.length, 'Wrong number of actions');
+    console.log('->', packs);
+    
+    browser.assert.elements(util.name('pack'), packs.length, 'Wrong number of packs');
   });
 
   it('should highlight the first row', function () {
